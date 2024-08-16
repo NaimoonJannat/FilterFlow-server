@@ -23,13 +23,32 @@ Follow these steps to set up and run the project locally.
 
 ```bash
 git clone https://github.com/NaimoonJannat/FilterFlow-server
-cd filter-flow-backend
+cd FilterFlow-server
 ```
 ### 2. Install Dependencies
 
 ```bash
 npm install
 ```
+### 3. Set Up Environment Variables
+
+Create a .env file in the root directory of the project and add the following environment variables:
+
+```bash
+PORT=3000
+DB_USER=yourMongoDBUser
+DB_PASS=yourMongoDBPassword
+```
+Replace yourMongoDBUser and yourMongoDBPassword with your actual MongoDB Atlas credentials.
+
+### 4. Run the Server
+Start the server using the following command:
+
+```bash
+npm start
+```
+The server will be running on http://localhost:3000.
+
 
 
 
