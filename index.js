@@ -3,7 +3,7 @@ const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 require('dotenv').config();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;    //it will be available at http://localhost:3000
 
 // middleware 
 app.use(cors({
@@ -27,7 +27,7 @@ const client = new MongoClient(uri, {
   async function run() {
     try {
      
-    const database = client.db('filterflowdb');
+    const database = client.db('filterflowdb');     
     const productCollection = database.collection("products");
 
      // to send products backend 
@@ -38,7 +38,7 @@ const client = new MongoClient(uri, {
         res.send(result);
       })
 
-     
+     //Get the backend products
     app.get('/all-products', async (req, res) => {
         const cursor = productCollection.find();
         const result = await cursor.toArray();
