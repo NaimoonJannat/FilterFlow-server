@@ -52,7 +52,7 @@ const client = new MongoClient(uri, {
     run().catch(console.log);
 
   app.get('/', (req, res) => {
-    res.send('Server Running')
+    res.send('Filter Flow Product Server Running')
   })
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
